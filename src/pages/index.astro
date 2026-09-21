@@ -22,7 +22,10 @@ import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astr
 	<TextAndImageHero reversed>
 		<div slot="text-container">
 			<h1>Korongo</h1>
-			<p>Use Korongo to jumpstart your company's marketing website.</p>
+			<p>
+				...is a Swahili word meaning 'crane'<br />
+				so if you need a lift...
+			</p>
 		</div>
 		<div slot="btns-container">
 			<Button href="/company/contact" customIcon
@@ -40,39 +43,41 @@ import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astr
 		</picture>
 	</TextAndImageHero>
 
+	{/* Testimonial hidden for now
 	<CustomerQuoteSection
 		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
 		customerName="Happy Customer"
 	/>
+	*/}
 
 	<ThreeColumnTextSection>
 		<div slot="column-1-body">
-			<h2>Why?</h2>
+			<h2>What?</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				Here at Korongo we offer tech support for small and medium sized
+				businesses to develop their online presence. Whether just beginning
+				or needing an update, Korongo provides jargon free advice and simple
+				solutions for you.
 			</p>
 		</div>
 		<Button slot="column-1-cta">Learn More</Button>
 		<div slot="column-2-body">
 			<h2>How?</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				After an informal conversation, we will lay out a clear pathway for
+				getting you to where you want to be. You will be in the loop from
+				day one ensuring that the end result is the online vision that you
+				want to portray.
 			</p>
 		</div>
 		<Button slot="column-2-cta" outlined>Learn More</Button>
 		<div slot="column-3-body">
-			<h2>What?</h2>
+			<h2>Why?</h2>
 			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-				tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-				consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-				mollitia cumque. Velit.
+				We come from a diverse background and understand that sometimes we
+				can't do everything and sometimes you need a lift. That's where
+				Korongo can step in and help with some of the tech stuff in a
+				simple, intuitive and problem solving kind of way.
 			</p>
 		</div>
 		<Button slot="column-3-cta">Learn More</Button>
@@ -136,5 +141,6 @@ import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astr
 	#home-hero-image {
 		width: 50%;
 		height: 50%;
+		margin-left: auto;
 	}
 </style>
