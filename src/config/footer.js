@@ -26,10 +26,6 @@ export const footerLists = [
 		title: 'Landing Pages',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
-			},
-			{
 				title: 'Landing Page 2',
 				slug: '/landing-pages/landing-2',
 			},
@@ -47,8 +43,8 @@ export const footerLists = [
 				slug: '/company/about',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
+				title: 'Services',
+				slug: '/services',
 			},
 			{
 				title: 'Contact',
@@ -60,8 +56,8 @@ export const footerLists = [
 		title: 'Theme',
 		items: [
 			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
+				title: 'Book a Call',
+				slug: '/company/contact',
 			},
 			{
 				title: 'Style Guide',
