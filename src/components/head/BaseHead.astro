@@ -21,6 +21,18 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/png" href="/favicon.png" />
+<!-- Fonts: Khand (headings) + Supreme (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+/>
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link
+	rel="stylesheet"
+	href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,600,700&display=swap"
+/>
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />

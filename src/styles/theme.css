@@ -1,6 +1,6 @@
 :root {
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
+	--theme-primary: #FF5B3E;
 	--theme-primary-hover: hsl(0, 0%, 20%);
 	--theme-on-primary: #fff;
 
@@ -10,7 +10,7 @@
 	--theme-surface-1: #f2f2f2;
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #cce6d0;
+	--theme-surface-2: #FFD84D;
 	--theme-on-surface-2: #000;
 
 	/* Theme Shapes */
@@ -31,16 +31,16 @@
 	--theme-blog-post-header-width: 1200px;
 
 	/* Theme Fonts */
-	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
-		Times, serif;
-	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
+	--theme-font-family-serif: 'Khand', -apple-system, BlinkMacSystemFont,
+		sans-serif;
+	--theme-font-family-sans: 'Supreme', -apple-system, BlinkMacSystemFont,
 		sans-serif;
 }
 
 [data-theme='default'] {
 	color-scheme: light;
 	/* Theme Colors */
-	--theme-primary: hsl(0, 0%, 0%);
+	--theme-primary: #FF5B3E;
 	--theme-primary-hover: hsl(0, 0%, 20%);
 	--theme-on-primary: #fff;
 
@@ -50,7 +50,7 @@
 	--theme-surface-1: #f2f2f2;
 	--theme-on-surface-1: #000;
 
-	--theme-surface-2: #cce6d0;
+	--theme-surface-2: #FFD84D;
 	--theme-on-surface-2: #000;
 
 	/* Theme Shape */

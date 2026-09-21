@@ -48,6 +48,9 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
           </div>
         ))
       }
+      <div class="footer-cta__container">
+        <slot name="cta" />
+      </div>
     </div>
     <div class="footer-copyright__container">
       {showPlug && <Plug/>}
