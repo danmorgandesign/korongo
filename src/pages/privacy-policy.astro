@@ -1,6 +1,7 @@
 ---
 import { TextSection } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
+import CopyEmailLink from '../components/CopyEmailLink.astro';
 
 const seo = {
   title: `Privacy Policy | Korongo`,
@@ -10,44 +11,90 @@ const seo = {
 
 <Layout seo={seo}>
   <TextSection narrow>
-    <h1>Privacy Policy</h1>
+    <h1>Korongo Customer Privacy Notice</h1>
 
-    <p>This is a placeholder Privacy Policy. Replace this copy with your real policy before launch.</p>
+    <p>This privacy notice tells you what to expect us to do with your personal information.</p>
 
-    <h2>Information We Collect</h2>
+    <h2>Contact details</h2>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, obcaecati. Aspernatur facilis molestias
-      vitae. Aliquid debitis eum quis repudiandae pariatur possimus provident accusantium reiciendis nemo, culpa labore
-      laborum, dolorum ea.</p>
+    <p>Email: <CopyEmailLink email="hello@korongo.co.uk" /></p>
 
-    <p>Corrupti impedit perferendis, libero in, voluptates quod ratione repudiandae veniam sapiente necessitatibus, eius
-      illo. Impedit quibusdam esse saepe placeat incidunt voluptatibus soluta dolore blanditiis ad provident animi
-      illum, est adipisci?</p>
+    <h2>What information we collect, use, and why</h2>
 
-    <h2>How We Use Your Information</h2>
+    <p>We collect or use the following personal information to provide and improve our products and services:</p>
 
-    <p>Ratione optio necessitatibus numquam dignissimos sunt molestiae ipsum fugiat quae maxime veniam aspernatur eius
-      quidem vel reprehenderit sequi, molestias perspiciatis, illo architecto perferendis nobis, in dolore! Nam
-      asperiores eaque totam.</p>
+    <ul>
+      <li>Names and contact details</li>
+      <li>Website user information and usage data (including how you interact with our website, products, and services)</li>
+    </ul>
 
-    <p>Repudiandae, labore alias. Voluptatem quia itaque sequi, aperiam, reprehenderit ipsum libero quae adipisci
-      possimus eum esse corrupti sapiente harum dignissimos eligendi cum iure tempora magnam nemo, sunt provident vero.
-      Voluptatibus.</p>
+    <p>We collect or use the following personal information for dealing with queries, project proposals, complaints, or claims:</p>
 
-    <h2>Cookies</h2>
+    <ul>
+      <li>Names and contact details</li>
+      <li>Communications history and purchase/service history</li>
+    </ul>
+
+    <h2>Lawful bases for collecting and using your data</h2>
+
+    <p>Under UK data protection law, we must have a "lawful basis" for collecting and using your personal information. We rely on the following bases:</p>
+
+    <ul>
+      <li><strong>Contract:</strong> We collect and use your details to perform a contract with you or to take steps at your request before entering into a contract (e.g., delivering a client project or sending a quote).</li>
+      <li><strong>Legitimate Interests:</strong> We collect usage data and contact details where it is necessary for our legitimate business interests, such as responding to general inquiries, optimizing website performance, and improving our products and services—provided this does not unacceptably impact your privacy rights.</li>
+      <li><strong>Consent:</strong> Where required by law (e.g., non-essential website cookies or direct marketing communications), we process data based on your explicit consent.</li>
+    </ul>
+
+    <h2>Where we get personal information from</h2>
+
+    <ul>
+      <li>Directly from you (e.g., when you fill out a contact form, email us, or sign up for a service).</li>
+      <li>Automatically via your device when you interact with our website (e.g., standard browser analytics and log data).</li>
+    </ul>
+
+    <h2>Who we share your information with</h2>
+
+    <p>We do not sell your personal data. However, we may share relevant data with trusted third-party service providers who assist us in operating our business, including:</p>
+
+    <ul>
+      <li>Web hosting and cloud infrastructure providers</li>
+      <li>Database and platform service providers</li>
+      <li>Analytics services</li>
+    </ul>
+
+    <p>If any of these third-party services store or process data outside the UK, we ensure appropriate legal safeguards (such as standard contractual clauses or UK adequacy regulations) are in place.</p>
+
+    <h2>How long we keep information</h2>
+
+    <p>We keep your personal information for as long as we are actively working together. We will remove or securely archive your information 36 months after our active relationship ends, unless a longer retention period is required by law (e.g., financial and tax records, which must be retained for 6 years) or you request deletion earlier.</p>
+
+    <h2>Your data protection rights</h2>
+
+    <p>Under UK data protection law, you have the following rights depending on the lawful basis used:</p>
+
+    <ul>
+      <li><strong>Your right of access:</strong> You have the right to ask us for copies of your personal information.</li>
+      <li><strong>Your right to rectification:</strong> You have the right to ask us to correct or delete personal information you think is inaccurate or incomplete.</li>
+      <li><strong>Your right to erasure:</strong> You have the right to ask us to delete your personal information in certain circumstances.</li>
+      <li><strong>Your right to restriction of processing:</strong> You have the right to ask us to limit how we use your personal information.</li>
+      <li><strong>Your right to object to processing:</strong> You have the right to object to the processing of your personal data where we rely on legitimate interests.</li>
+      <li><strong>Your right to data portability:</strong> You have the right to ask that we transfer the personal information you gave us to another organization, or to you.</li>
+      <li><strong>Your right to withdraw consent:</strong> When we use consent as our lawful basis, you have the right to withdraw your consent at any time.</li>
+    </ul>
+
+    <p>If you make a request, we must respond to you without undue delay and in any event within one month. To exercise any of these rights, please contact us at <CopyEmailLink email="hello@korongo.co.uk" />.</p>
+
+    <h2>How to complain</h2>
+
+    <p>If you have any concerns about our use of your personal information, you can make a data protection complaint to us directly at <CopyEmailLink email="hello@korongo.co.uk" />.</p>
+
+    <p>If you remain unhappy with how we have used your data after raising a complaint with us, you have the right to lodge a complaint with the Information Commissioner's Office (ICO):</p>
 
     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus eveniet quibusdam ipsa, veniam adipisci rerum
-      temporibus inventore! Sit quas vero laboriosam tempora alias! Fugit, saepe earum quod modi harum qui.
-      Expedita, pariatur consequuntur! Modi, maiores. Quaerat voluptatibus nostrum non harum rerum dolorem totam qui
-      repellendus, itaque dignissimos eveniet consequuntur ducimus! Non commodi magnam nemo, pariatur facilis
-      repellendus sunt fuga ipsa.
+      Information Commissioner's Office<br />
+      Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF<br />
+      Helpline: 0303 123 1113<br />
+      Website: <a href="https://www.ico.org.uk/make-a-complaint" target="_blank" rel="noopener noreferrer">https://www.ico.org.uk/make-a-complaint</a>
     </p>
-
-    <h2>Contact Us</h2>
-
-    <p>Consequuntur similique ab ea tenetur, quo aperiam molestias sed facilis minus eaque eveniet libero quis
-      accusantium deleniti tempore? Qui vel reiciendis voluptates corporis eum repellat maiores fugit, eveniet sapiente
-      ad.</p>
   </TextSection>
 </Layout>

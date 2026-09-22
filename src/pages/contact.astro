@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Page.astro';
 import LandingContactForm from '../components/forms/LandingContactForm.astro';
+import CopyEmailLink from '../components/CopyEmailLink.astro';
 
 const seo = {
 	title: 'Contact | Korongo',
@@ -23,6 +24,7 @@ const seo = {
       <div class="full-page-split__content-container">
         <h1>Drop us your deets and we'll get in touch.</h1>
         <p>Fill out your contact info and we'll get in touch to discuss how we can give you a lift.</p>
+        <p>Don't like forms, click on <CopyEmailLink email="hello@korongo.co.uk" /> to copy it!</p>
         <LandingContactForm/>
       </div>
     </section>

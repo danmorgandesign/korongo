@@ -1,0 +1,48 @@
+---
+const { email } = Astro.props;
+---
+
+<button type="button" class="copy-email" data-email={email}>
+  <span class="copy-email__label">{email}</span>
+</button>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-email').forEach((button) => {
+    const label = button.querySelector<HTMLSpanElement>('.copy-email__label');
+    const email = button.dataset.email;
+    if (!label || !email) return;
+
+    const defaultText = label.textContent;
+
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        label.textContent = 'Copied!';
+        setTimeout(() => {
+          label.textContent = defaultText;
+        }, 1500);
+      } catch {
+        label.textContent = 'Could not copy';
+        setTimeout(() => {
+          label.textContent = defaultText;
+        }, 1500);
+      }
+    });
+  });
+</script>
+
+<style>
+  .copy-email {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: var(--theme-primary);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .copy-email:hover {
+    color: var(--theme-primary-hover);
+  }
+</style>
