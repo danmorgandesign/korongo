@@ -21,17 +21,32 @@ const image = new URL(Astro.props.image || './social.png', Astro.site);
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/svg+xml" href="/assets/images/avatar-k.svg" />
 <!-- Fonts: Khand (headings) + Supreme (body) -->
+<!-- Loaded non-render-blocking: the stylesheet applies once it loads (media swap trick), falling back to a normal <link> when JS is off -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
 	rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+	media="print"
+	onload="this.media='all'"
 />
 <link rel="preconnect" href="https://api.fontshare.com" />
 <link
 	rel="stylesheet"
 	href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,600,700&display=swap"
+	media="print"
+	onload="this.media='all'"
 />
+<noscript>
+	<link
+		rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Khand:wght@400;500;600;700&display=swap"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://api.fontshare.com/v2/css?f[]=supreme@400,500,600,700&display=swap"
+	/>
+</noscript>
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <meta name="title" content={title} />
