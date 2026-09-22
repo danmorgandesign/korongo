@@ -1,31 +1,94 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
+import { Icon } from 'astro-icon/components';
 import Layout from '../layouts/Page.astro';
 import HeroSection from '../components/sections/heros/HeroSection.astro';
 
 const seo = {
 	title: 'Services | Korongo',
-	description: 'Services Page',
+	description: 'Web design, UX design, tech training, social media setup, strategic planning and straightforward advice — the services Korongo offers to help your business grow online.',
 };
+
+const services = [
+	{ icon: 'mdi:web', label: 'Web Design' },
+	{ icon: 'mdi:palette-swatch-outline', label: 'UX Design' },
+	{ icon: 'mdi:school-outline', label: 'Tech Training' },
+	{ icon: 'mdi:share-variant-outline', label: 'Social Media Setup' },
+	{ icon: 'mdi:strategy', label: 'Strategic Planning' },
+	{ icon: 'mdi:lightbulb-on-outline', label: 'Simple Advice' },
+	{ icon: 'mdi:robot-outline', label: 'AI Savvy' },
+];
 ---
 
 <Layout {seo}>
+	<div class="services-hero">
 	<HeroSection>
 		<div slot="text-container">
 			<h1>Our Services</h1>
 			<p>
 				Here's how we can help your business grow.
 			</p>
+			<div class="services__grid">
+				{services.map((service) => (
+					<div class="services__card">
+						<Icon name={service.icon} width="40" height="40" />
+						<span>{service.label}</span>
+					</div>
+				))}
+			</div>
 		</div>
     <picture slot="image-container">
       <img
-        src="/assets/images/home/classic-hero.jpg"
-        alt="Astro Odyssee"
+        src="/assets/images/elephant.jpg"
+        alt="Elephant"
         id="home-hero-image"
       />
     </picture>
 	</HeroSection>
-  <TextSection narrow>
-    <p>Services content coming soon.</p>
-  </TextSection>
+	</div>
 </Layout>
+
+<style>
+	.services-hero :global(.hero-section__section) {
+		grid-template-columns: 3fr 2fr;
+	}
+	.services-hero :global(.hero-section__text) {
+		max-width: none;
+	}
+	.services__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-auto-rows: 1fr;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+	.services__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 0.5rem;
+		padding: 1.25rem 1rem;
+		min-height: 8rem;
+		background-color: var(--theme-surface-1);
+		color: var(--theme-on-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.services__card span {
+		font-weight: 600;
+		font-size: 0.95rem;
+	}
+	@media (max-width: 768px) {
+		.services-hero :global(.hero-section__section) {
+			grid-template-columns: 1fr;
+		}
+		.services__grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media (max-width: 480px) {
+		.services__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

@@ -4,7 +4,7 @@ import LandingContactForm from '../components/forms/LandingContactForm.astro';
 
 const seo = {
 	title: 'Contact | Korongo',
-	description: 'Contact Page',
+	description: 'Get in touch with Korongo to talk about your website or online presence — clear advice for startups, creatives, and small to medium businesses.',
 };
 ---
 
@@ -21,8 +21,8 @@ const seo = {
     </section>
     <section class="full-page-split__content-section">
       <div class="full-page-split__content-container">
-        <h1>Contact Us For a Free Consultation</h1>
-        <p>Fill out the form below to schedule a free consultation on your business' website needs.</p>
+        <h1>Drop us your deets and we'll get in touch.</h1>
+        <p>Fill out your contact info and we'll get in touch to discuss how we can give you a lift.</p>
         <LandingContactForm/>
       </div>
     </section>
@@ -32,22 +32,26 @@ const seo = {
 <style>
 .full-page-split__wrapper {
   display: grid;
-  grid-template-columns: 6fr 4fr;
+  grid-template-columns: 4fr 6fr;
   grid-template-rows: minmax(28rem, 44rem);
   grid-auto-columns: 1fr;
 }
 .full-page-split__image-section {
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 .full-page-split__image-section picture {
   position: absolute;
   inset: 0;
 }
 .full-page-split__image-section :global(img) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  object-fit: contain;
 }
 .full-page-split__content-section {
   display: flex;
@@ -58,9 +62,6 @@ const seo = {
 .full-page-split__content-container {
   margin: 1rem;
   padding: 2rem;
-  background-color: var(--theme-surface-1);
-  color: var(--theme-on-surface-1);
-  border-radius: var(--theme-shape-radius);
 }
 .full-page-split__content-container h1 {
   font-size: var(--font-size-xl);

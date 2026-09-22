@@ -1,47 +1,140 @@
 ---
-import { TextSection } from '@components/odyssey-theme';
+import { Icon } from 'astro-icon/components';
+import { Button, TextSection, CtaCardSection, Container } from '@components/odyssey-theme';
 import Layout from '../layouts/Page.astro';
 import HeroSection from '../components/sections/heros/HeroSection.astro';
 
 const seo = {
 	title: 'About | Korongo',
-	description: 'About Page',
+	description: 'Korongo is a no-jargon web design studio helping startups, creatives, and small to medium businesses get online with clear advice and websites that actually work.',
 };
+
+const services = [
+	{ icon: 'mdi:web', label: 'Web Design' },
+	{ icon: 'mdi:palette-swatch-outline', label: 'UX Design' },
+	{ icon: 'mdi:school-outline', label: 'Tech Training' },
+	{ icon: 'mdi:share-variant-outline', label: 'Social Media Setup' },
+	{ icon: 'mdi:strategy', label: 'Strategic Planning' },
+	{ icon: 'mdi:lightbulb-on-outline', label: 'Simple Advice' },
+];
 ---
 
 <Layout {seo}>
+	<div class="about-hero">
 	<HeroSection>
 		<div slot="text-container">
 			<h1>About Korongo</h1>
 			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, nisi
-				recusandae? Quidem dignissimos nobis, dicta unde, aperiam voluptate
-				autem iste reprehenderit, aliquam ducimus illo ea ipsum qui animi sequi.
-				Numquam.
+				We're the crane you call in when your business needs a lift online.
+				No jargon, no bloated agency process — just clear advice and a
+				website that actually works for you.
 			</p>
 		</div>
     <picture slot="image-container">
       <img
-        src="/assets/images/elephant.jpg"
-        alt="Elephant"
+        src="/assets/images/simba.jpg"
+        alt="Simba"
         id="home-hero-image"
       />
     </picture>
 	</HeroSection>
+	</div>
+
+	<Container>
+		<div class="about-services__section">
+			<div class="about-services__grid">
+				{services.map((service) => (
+					<div class="about-services__card">
+						<Icon name={service.icon} width="28" height="28" />
+						<span>{service.label}</span>
+					</div>
+				))}
+			</div>
+			<div class="about-services__btn">
+				<Button href="/contact" customIcon
+					>Book a Call <Fragment slot="icon">
+						<Icon name="ic:baseline-chevron-right" />
+					</Fragment></Button
+				>
+			</div>
+		</div>
+	</Container>
+
   <TextSection narrow>
     <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo asperiores alias illo accusamus voluptatem ea cum nemo odit! Consequatur quidem quo iusto quam ea neque nisi dolorum quod, recusandae id!
-      Repudiandae, fugit labore voluptatum beatae modi omnis adipisci corrupti aut aliquid cumque inventore iure possimus doloremque iste incidunt nulla architecto. Nobis iusto sunt voluptatem necessitatibus laborum, earum doloremque fugit rerum!
+      Most small businesses don't need a retainer, a twelve-week discovery phase, or a website stuffed with features nobody asked for. They need something that looks good, works properly, and doesn't take six months to get live. That's the gap Korongo fills - practical, jargon-free help for people who'd rather be running their business than wrestling with a content management system.
     </p>
-    <p>Fugit asperiores harum consectetur sapiente deleniti. Optio enim tenetur impedit reprehenderit labore, illo eius in, consequatur odio dolore iste assumenda explicabo, nisi similique qui obcaecati possimus delectus reiciendis quod modi.</p>
-    
+    <p>We start with a conversation, not a sales pitch. If a full rebuild isn't what you need, we'll say so. Sometimes the answer is a few tweaks, a clearer message, or some straightforward training so you can manage things yourself. We'd rather give you honest advice than sell you something you don't need.</p>
+
     <p>
-      Vel tempore rem omnis esse officiis optio, explicabo, quod deleniti adipisci ullam cum necessitatibus eius minus vero saepe ad, dicta rerum praesentium deserunt illo itaque odio corrupti voluptatum quibusdam. Pariatur.
-      Porro neque tempore, illum eligendi deleniti iure dolorem amet magnam at dolores veniam nemo cumque aut alias repellat est dicta sit repellendus facilis officia? Minima dolorum quo ducimus adipisci perferendis.
+      Our work covers the full range of getting, and keeping, a business online. Web Design for new sites built to convert, not just look nice. UX Design that makes sure visitors actually find what they're looking for. Tech Training so your team isn't stuck calling us for every small change. Social Media Setup to get your channels looking sharp and linked up properly. Strategic Planning to map out where your online presence needs to go next. And Simple Advice, for when all you need is a straight answer from someone who knows the tech stuff.
     </p>
     <p>
-      Quis distinctio tempora sequi sit repudiandae cumque nostrum deserunt, voluptatibus rem eum fuga modi beatae cum ullam delectus dicta atque eius nam quos corporis. Animi praesentium quae nobis. Odit, mollitia. Voluptatum, hic explicabo. Ex accusamus ipsa ea dolor commodi quas esse ipsum alias et adipisci error necessitatibus atque facere rerum ratione consequatur aspernatur repudiandae minima consectetur fuga, doloremque dolorum pariatur.
-      Ipsam error eaque velit possimus porro eum quod illo iusto officia magnam magni, beatae nisi voluptate praesentium? Saepe distinctio adipisci quas hic quae facilis? Sequi eum hic aperiam impedit minus?
+      Whatever stage you're at, starting from scratch, patching up an old site, or just after a second opinion. Korongo is here to give your business the lift it needs.
     </p>
   </TextSection>
+
+	<CtaCardSection
+		background="var(--theme-surface-2)"
+		color="var(--theme-on-surface-2)"
+	>
+		<h2>Start Your Website Today</h2>
+		<p>
+			It only takes a couple of clicks to have a new, modern website for your
+			business or startup.
+		</p>
+		<Button href="/contact" customIcon
+			>Book a Call <Fragment slot="icon">
+				<Icon name="ic:baseline-chevron-right" />
+			</Fragment></Button
+		>
+	</CtaCardSection>
 </Layout>
+
+<style>
+	.about-hero :global(.hero-section__text) {
+		order: 2;
+	}
+	.about-hero :global(.hero-section__image) {
+		order: 1;
+	}
+	.about-services__section {
+		margin: var(--section-margin) auto;
+	}
+	.about-services__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+		gap: 0.75rem;
+	}
+	.about-services__btn {
+		display: flex;
+		justify-content: center;
+		margin-top: calc(var(--section-margin) / 2);
+	}
+	.about-services__card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		gap: 0.4rem;
+		padding: 0.75rem 0.5rem;
+		background-color: var(--theme-surface-1);
+		color: var(--theme-on-surface-1);
+		border-radius: var(--theme-shape-radius);
+	}
+	.about-services__card span {
+		font-weight: 600;
+		font-size: 0.75rem;
+	}
+	@media (max-width: 768px) {
+		.about-services__grid {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	@media (max-width: 480px) {
+		.about-services__grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+</style>
