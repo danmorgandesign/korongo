@@ -26,17 +26,20 @@ import Container from '../core/Container.astro';
     margin: var(--section-margin) auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem;
     text-align: center;
-    justify-content: space-evenly;
+    justify-content: center;
   }
   .three-col-text__column {
-    width: var(--column-width);
-    margin-bottom: 2rem;
-    padding: 1rem;
+    width: calc(var(--column-width) - 2rem);
+    padding: 2rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--theme-surface-1);
+    color: var(--theme-on-surface-1);
+    border-radius: var(--theme-shape-radius);
   }
 
   @media(max-width: 1200px) {

@@ -4,7 +4,7 @@ const {type = "text", label, name, placeholder, required} = Astro.props;
 ---
 
 <div class="form-field__container">
-  {label && <label for={name}>{label}</label>}
+  {label && <label for={name}>{label}{required && <span class="form-field__required">*</span>}</label>}
   <input type={type} name={name} placeholder={placeholder} required={required}/>
 </div>
 
@@ -22,5 +22,9 @@ const {type = "text", label, name, placeholder, required} = Astro.props;
   }
   .form-field__container input:focus {
     border: 2px solid var(--form-field-border-focus-color, #000);
+  }
+  .form-field__required {
+    color: #e53935;
+    margin-left: 0.15rem;
   }
 </style>
