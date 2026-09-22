@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Page.astro';
+import HeroSection from '../components/sections/heros/HeroSection.astro';
+
+const seo = {
+	title: 'Thank You | Korongo',
+	description: 'Thank you for contacting us',
+};
+---
+
+<Layout {seo}>
+	<div class="thank-you-hero">
+	<HeroSection>
+		<div slot="text-container">
+			<h1>Thanks for reaching out!</h1>
+			<p>We've received your message and will get back to you shortly.</p>
+		</div>
+		<picture slot="image-container">
+			<img
+				src="/assets/images/zebra.jpg"
+				alt="Zebra"
+			/>
+		</picture>
+	</HeroSection>
+	</div>
+</Layout>
+
+<style>
+	.thank-you-hero :global(.hero-section__text) {
+		order: 2;
+	}
+	.thank-you-hero :global(.hero-section__image) {
+		order: 1;
+	}
+</style>
